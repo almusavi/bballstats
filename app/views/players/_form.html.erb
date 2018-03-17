@@ -1,0 +1,97 @@
+<%= form_with(model: player, local: true) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.text_field :id, id: :player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position, id: :player_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, id: :player_first_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, id: :player_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jersey_number %>
+    <%= form.text_field :jersey_number, id: :player_jersey_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :full_name %>
+    <%= form.text_field :full_name, id: :player_full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.text_field :height, id: :player_height %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.text_field :weight, id: :player_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :throw_hand %>
+    <%= form.text_field :throw_hand, id: :player_throw_hand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bat_hand %>
+    <%= form.text_field :bat_hand, id: :player_bat_hand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :college %>
+    <%= form.text_field :college, id: :player_college %>
+  </div>
+
+  <div class="field">
+    <%= form.label :high_school %>
+    <%= form.text_field :high_school, id: :player_high_school %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthdate %>
+    <%= form.text_field :birthdate, id: :player_birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthdate %>
+    <%= form.text_field :birthdate, id: :player_birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthcountry %>
+    <%= form.text_field :birthcountry, id: :player_birthcountry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pro_debut %>
+    <%= form.date_select :pro_debut, id: :player_pro_debut %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
