@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Id:</strong>
-  <%= @player.id %>
-</p>
-
-<p>
   <strong>Position:</strong>
   <%= @player.position %>
 </p>
@@ -66,11 +61,6 @@
 </p>
 
 <p>
-  <strong>Birthdate:</strong>
-  <%= @player.birthdate %>
-</p>
-
-<p>
   <strong>Birthcountry:</strong>
   <%= @player.birthcountry %>
 </p>
@@ -80,5 +70,4 @@
   <%= @player.pro_debut %>
 </p>
 
-<%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>
